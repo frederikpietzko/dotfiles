@@ -12,6 +12,17 @@ createSymlink() {
   fi
 }
 
+makeExecutable() {
+  for dir in ./*; do
+    if [[ -f $dir ]]; then
+      continue
+    fi
+    if test -e "$dir/install.sh"; then
+      chmod +x "$dir/install.sh"
+    fi
+  done
+}
+
 checkInstallScripts() {
   for dir in ./*; do 
     if [[ -f $dir ]]; then
@@ -28,6 +39,7 @@ checkInstallScripts() {
   done
 }
 
+makeExecutable
 checkInstallScripts
 createSymlink "neovim" ".config/nvim" "$HOME/.config/nvim"
 createSymlink "qtile" ".config/qtile" "$HOME/.config/qtile"
