@@ -234,7 +234,7 @@ screens = [
                 widget.TextBox(
                     text=" | ", background=nord0, foreground=colors[2]),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-                widget.StatusNotifier(background=nord2),
+                widget.StatusNotifier(background=nord0),
                 widget.TextBox(
                     text=" | ", background=nord0, foreground=colors[2]),
                 widget.Battery(
