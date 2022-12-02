@@ -141,7 +141,8 @@ keys = [
         lazy.widget["keyboardlayout"].next_keyboard(),
         desc="Next Keyboard Layout"),
     # Spawn Programs
-    Key([mod, "control"], "s", lazy.spawn("gnome-control-center user-accounts")),
+    Key([mod, "control"], "s",
+        lazy.spawn("gnome-control-center user-accounts")),
     Key([mod], "b", lazy.spawn("google-chrome-stable")),
     Key([mod], "i", lazy.spawn("intellij-idea-ultimate")),
     Key([mod], "m", lazy.spawn("spotify")),
@@ -183,11 +184,12 @@ layouts = [
     # layout.Bsp(),
     # layout.Matrix(),
     # layout.MonadTall(),
+    layout.MonadThreeCol(border_focus=nord3, border_width=2, margin=5),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
     # layout.TreeTab(),
-    layout.VerticalTile(),
+    # layout.VerticalTile(),
     # layout.Zoomy(),
 ]
 
@@ -218,40 +220,52 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.Clock(foreground=colors[2],
-                             background=nord3,
-                             format="%a - %H:%M"),
-                widget.Spacer(background=nord3, length=50),
-                widget.Wttr(background=nord3, location={"Aachen": "Home"}),
+                             background=nord0,
+                             format="%a - %H:%M  |  %d.%m.%y"),
+                widget.TextBox(
+                    text="  |  ", background=nord0, foreground=colors[2]),
+                widget.Wttr(background=nord0, location={"Aachen": "Home"}),
                 widget.Spacer(background=nord0),
                 widget.KeyboardLayout(
                     configured_keyboards=["us", "de"],
-                    background=nord2,
+                    background=nord0,
                     foreground=[nord4, nord5],
                 ),
+                widget.TextBox(
+                    text=" | ", background=nord0, foreground=colors[2]),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 widget.StatusNotifier(background=nord2),
+                widget.TextBox(
+                    text=" | ", background=nord0, foreground=colors[2]),
                 widget.Battery(
                     charge_char="⚡",
                     discharge_char=" ",
                     format='{char} {percent:2.0%} {hour:d}h{min:02d}',
                     foreground=colors[2],
-                    background=nord8,
+                    background=nord0,
                     padding=10,
                 ),
                 widget.TextBox(
+                    text="  |  ", background=nord0, foreground=colors[2]),
+                widget.TextBox(
                     text="Vol:",
-                    background=nord9,
+                    background=nord0,
                     foreground=colors[2],
                 ),
                 widget.PulseVolume(
-                    background=nord9,
+                    background=nord0,
                     foreground=colors[2],
                 ),
+                widget.TextBox(
+                    text="  |  ", background=nord0, foreground=colors[2]),
                 widget.QuickExit(
                     default_text="Shutdown",
-                    background=nord11,
-                    foreground=colors[2],
+                    background=nord0,
+                    foreground=nord11,
                 ),
+                widget.TextBox(text="  ",
+                               background=nord0,
+                               foreground=colors[2])
             ],
             24,
             border_width=[0, 0, 2, 0],
