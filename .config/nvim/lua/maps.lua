@@ -11,21 +11,17 @@ keymap.set("n", "-", "<C-x>")
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- New Tab
-keymap.set("n", "te", ":tabedit<Return>", { silent = true })
+keymap.set("n", "<Leader>te", ":tabedit<Return>", { silent = true })
 -- Split window
-keymap.set("n", "ssh", ":split<Return><C-w>w", { silent = true })
-keymap.set("n", "ssv", ":vsplit<Return><C-w>w", { silent = true })
+keymap.set("n", "<Leader>ssh", ":split<Return><C-w>w", { silent = true })
+keymap.set("n", "<Leader>ssv", ":vsplit<Return><C-w>w", { silent = true })
 
--- Move window
-keymap.set("n", "<Space>", "<C-w>w")
-keymap.set("", "s<left>", "<C-w>h")
-keymap.set("", "s<up>", "<C-w>k")
-keymap.set("", "s<down>", "<C-w>j")
-keymap.set("", "s<right>", "<C-w>l")
-keymap.set("", "sh", "<C-w>h")
-keymap.set("", "sk", "<C-w>k")
-keymap.set("", "sj", "<C-w>j")
-keymap.set("", "sl", "<C-w>l")
+-- Move window focus
+keymap.set("n", "<Leader>sw", "<C-w>w")
+keymap.set("n", "<Leader>sh", "<C-w>h")
+keymap.set("n", "<Leader>sk", "<C-w>k")
+keymap.set("n", "<Leader>sj", "<C-w>j")
+keymap.set("n", "<Leader>sl", "<C-w>l")
 
 -- Resize Window
 keymap.set("n", "<C-w><left>", "<C-w><")
@@ -39,3 +35,9 @@ keymap.set("n", "<C-w>j", "<C-w>-")
 
 -- remove highlight
 keymap.set("n", "<Leader>/", ":noh<cr>")
+
+-- Save and close
+keymap.set("n", "<Leader>bs", ":w<cr>")
+keymap.set("n", "<Leader>bsa", ":wa<cr>")
+keymap.set("n", "<Leader>bc", ":wq<cr>")
+

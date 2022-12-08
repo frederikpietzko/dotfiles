@@ -30,9 +30,9 @@ vim.opt.tabstop = 2
 vim.opt.ai = true -- Auto indent
 vim.opt.si = true -- Smart indent
 vim.opt.wrap = false -- No wrap lines
-vim.opt.backspace = { 'start', 'eol', 'indent' }
-vim.opt.path:append { "**" } -- Finding files - search down into subfolders
-vim.opt.wildignore:append { '*/node_modules/*' }
+vim.opt.backspace = { "start", "eol", "indent" }
+vim.opt.path:append({ "**" }) -- Finding files - search down into subfolders
+vim.opt.wildignore:append({ "*/node_modules/*" })
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 7
 
@@ -42,8 +42,11 @@ vim.cmd([[let &t_ce = "\e[4:0m"]])
 
 -- Turn off paste mode when leavin insert
 vim.api.nvim_create_autocmd({ "InsertLeave" }, {
-  pattern = "*",
-  command = "set nopaste"
+	pattern = "*",
+	command = "set nopaste",
 })
 
-vim.opt.formatoptions:append { "r" }
+-- Reyank after paste
+vim.cmd([[xnoremap p pgvy]])
+
+vim.opt.formatoptions:append({ "r" })
