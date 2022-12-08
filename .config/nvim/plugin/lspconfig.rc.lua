@@ -1,19 +1,15 @@
 local status, nvim_lsp = pcall(require, "lspconfig")
-local settings = require("settings")
 if not status then
 	return
 end
 
-local protocal = require("vim.lsp.protocol")
-
-local on_attach = function(client, bufnr)
-	-- formatting
-	--if client.server_capabilities.documentFormattingProvider then
-	-- vim.api.nvim_command [[augroup Format]]
-	--vim.api.nvim_command [[autocmd! * <buffer>]]
-	--vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
-	--vim.api.nvim_command [[augroup END]]
-	--end
+local on_attach = function(_, buffer)
+	local keymap_opts = { buffer = buffer }
+	vim.keymap.set("n", "<c-]>", vim.lsp.buf.definition, keymap_opts)
+  vim.keymap.set("n", "K", vim.lsp.buf.hover, keymap_opts)
+  vim.keymap.set("n", "<c-p>", vim.lsp.buf.signature_help, keymap_opts)
+  vim.keymap.set("n", "<Leader>ca", vim.lsp.buf.code_action, keymap_opts)
+  vim.keymap.set("n", "<Leader>sr", vim.lsp.buf.rename, keymap_opts)
 end
 
 -- Typescript
@@ -52,13 +48,9 @@ nvim_lsp.java_language_server.setup({})
 nvim_lsp.gopls.setup({})
 
 -- Nim -- Something is not working here
-nvim_lsp.nimls.setup({})
+-- nvim_lsp.nimls.setup({})
 
 -- Rust
-nvim_lsp.rls.setup({
-	settings = {
-		unstable_features = true,
-		build_on_save = true,
-		all_features = true,
-	},
-})
+-- nvim_lsp.rls.setup({
+--on_attach = on_attach
+--})

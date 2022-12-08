@@ -13,8 +13,9 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 -- New Tab
 keymap.set("n", "te", ":tabedit<Return>", { silent = true })
 -- Split window
-keymap.set("n", "ss", ":split<Return><C-w>w", { silent = true })
-keymap.set("n", "sv", ":vsplit<Return><C-w>w", { silent = true })
+keymap.set("n", "ssh", ":split<Return><C-w>w", { silent = true })
+keymap.set("n", "ssv", ":vsplit<Return><C-w>w", { silent = true })
+
 -- Move window
 keymap.set("n", "<Space>", "<C-w>w")
 keymap.set("", "s<left>", "<C-w>h")
@@ -35,3 +36,6 @@ keymap.set("n", "<C-w>h", "<C-w><")
 keymap.set("n", "<C-w>k", "<C-w>+")
 keymap.set("n", "<C-w>l", "<C-w>>")
 keymap.set("n", "<C-w>j", "<C-w>-")
+
+-- remove highlight
+keymap.set("n", "<Leader>/", ":noh<cr>")
