@@ -44,4 +44,4 @@ checkInstallScripts
 createSymlink "neovim" ".config/nvim" "$HOME/.config/nvim"
 createSymlink "qtile" ".config/qtile" "$HOME/.config/qtile"
 createSymlink "lvim" ".config/lvim" "$HOME/.config/lvim"
-
+createSymlink "alacritty" ".config/alacritty" "$HOME/.config/alacritty"
