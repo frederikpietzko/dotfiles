@@ -11,6 +11,9 @@ packer.startup(function(use)
 		"svrana/neosolarized.nvim",
 		requires = { "tjdevries/colorbuddy.nvim" },
 	})
+  use("arcticicestudio/nord-vim")
+  use("ray-x/aurora")
+  use("sainnhe/everforest")
 
 	-- Autocompletion
 	use("jose-elias-alvarez/null-ls.nvim") -- Use Nvmin lang server to inject LSP Diagnostics
@@ -26,7 +29,6 @@ packer.startup(function(use)
 	use("neovim/nvim-lspconfig")
 	-- end LSP
 
-	use("arcticicestudio/nord-vim")
 	use("kyazdani42/nvim-web-devicons") -- File Icons
 	use("glepnir/lspsaga.nvim") -- LSP UIs
 	use("L3MON4D3/LuaSnip") -- Snippets
