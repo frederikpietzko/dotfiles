@@ -43,4 +43,5 @@ makeExecutable
 checkInstallScripts
 createSymlink "neovim" ".config/nvim" "$HOME/.config/nvim"
 createSymlink "qtile" ".config/qtile" "$HOME/.config/qtile"
+createSymlink "lvim" ".config/lvim" "$HOME/.config/lvim"
 
