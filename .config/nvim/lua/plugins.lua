@@ -6,7 +6,11 @@ end
 vim.cmd([[packadd packer.nvim]])
 
 packer.startup(function(use)
-	use("wbthomason/packer.nvim")
+	use("wbthomason/packer.nvim") -- Packer can manage itself
+
+	use("folke/neodev.nvim") -- Patch Lua server to be nicer to develop nvim configs with.
+
+	-- Colorschemes
 	use({
 		"svrana/neosolarized.nvim",
 		requires = { "tjdevries/colorbuddy.nvim" },
@@ -29,11 +33,13 @@ packer.startup(function(use)
 	use("neovim/nvim-lspconfig")
 	-- end LSP
 
+	-- Icons
 	use("kyazdani42/nvim-web-devicons") -- File Icons
+	use("onsails/lspkind-nvim") -- vscode-like pictograms
+
 	use("glepnir/lspsaga.nvim") -- LSP UIs
 	use("L3MON4D3/LuaSnip") -- Snippets
 	use("hoob3rt/lualine.nvim") -- Statusline
-	use("onsails/lspkind-nvim") -- vscode-like pictograms
 
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -48,16 +54,27 @@ packer.startup(function(use)
 	use("windwp/nvim-ts-autotag")
 
 	use("nvim-lua/plenary.nvim") -- Common utilities
+
+	-- Telescope
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-file-browser.nvim")
+  
+  -- Better Project Root for telescope & co kg
+  use("ahmedkhalf/project.nvim")
 
 	use("akinsho/nvim-bufferline.lua")
 	use("norcalli/nvim-colorizer.lua")
 
+	-- Git
 	use("lewis6991/gitsigns.nvim")
 	use("dinhhuy258/git.nvim")
 
+	-- Dashboard
 	use("glepnir/dashboard-nvim")
 
+	-- Neoformat
 	use("sbdchd/neoformat")
+
+	-- Whichkey
+	use("folke/which-key.nvim")
 end)
