@@ -11,14 +11,12 @@ packer.startup(function(use)
 		"svrana/neosolarized.nvim",
 		requires = { "tjdevries/colorbuddy.nvim" },
 	})
-  use("arcticicestudio/nord-vim")
-  use("ray-x/aurora")
-  use("sainnhe/everforest")
+	use("arcticicestudio/nord-vim")
+	use("ray-x/aurora")
+	use("sainnhe/everforest")
 
 	-- Autocompletion
 	use("jose-elias-alvarez/null-ls.nvim") -- Use Nvmin lang server to inject LSP Diagnostics
-	use("williamboman/mason.nvim")
-	use("williamboman/mason-lspconfig.nvim")
 	use("hrsh7th/nvim-cmp") -- Tab completion
 	use("hrsh7th/cmp-buffer") -- nvim-cmp source for buffer words
 	use("hrsh7th/cmp-nvim-lsp") -- nvim-cmp source for neovims builtin lsp
@@ -26,6 +24,8 @@ packer.startup(function(use)
 	use("hrsh7th/cmp-path")
 
 	-- LSP
+	use("williamboman/mason.nvim")
+	use("williamboman/mason-lspconfig.nvim") -- Make Mason and lspconfig play nice together
 	use("neovim/nvim-lspconfig")
 	-- end LSP
 
@@ -40,10 +40,10 @@ packer.startup(function(use)
 		run = ":TSUpdate",
 	})
 
-  -- Rust
-  use("simrat39/rust-tools.nvim")
+	-- Rust
+	use("simrat39/rust-tools.nvim")
 
-  -- Autoclose Brackets & Tags
+	-- Autoclose Brackets & Tags
 	use("windwp/nvim-autopairs") -- Autopairs, auto close brackets
 	use("windwp/nvim-ts-autotag")
 
