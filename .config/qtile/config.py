@@ -146,6 +146,7 @@ keys = [
     Key([mod], "b", lazy.spawn("google-chrome-stable")),
     Key([mod], "i", lazy.spawn("intellij-idea-ultimate")),
     Key([mod], "m", lazy.spawn("spotify")),
+    Key([mod], "f", lazy.window.toggle_floating()),
 ]
 
 groups = [Group(i) for i in "1234567890"]
@@ -286,6 +287,7 @@ mouse = [
          lazy.window.set_size_floating(),
          start=lazy.window.get_size()),
     Click([mod], "Button2", lazy.window.bring_to_front()),
+    Click([mod, "Shift"], "Button1", lazy.window.toggle_floating()),
 ]
 
 dgroups_key_binder = None
