@@ -15,15 +15,18 @@
 }
 #window {
     border:  1;
-    padding: 5;
+    padding: 0;
+    background-color: @background-color;
 }
 #mainbox {
     border:  0;
     padding: 0;
+    background-color: @prompt-background;
 }
 #message {
     border:       1px solid 0px 0px ;
     padding:      1px ;
+    background-color: inherit;
 }
 #listview {
     fixed-height: 0;
@@ -72,7 +75,7 @@
 }
 #prompt {
     padding:          @prompt-padding;
-    background-color: @prompt-background;
+    background-color: @element-background;
     text-color:       @prompt-foreground;
     font:             @prompt-font;
     border-radius:    2px;
