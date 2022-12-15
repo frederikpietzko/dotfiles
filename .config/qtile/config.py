@@ -206,6 +206,7 @@ screens = [
     Screen(
         top=bar.Bar(
             [
+                widget.Spacer(length=15, background=nord0),
                 widget.CurrentLayoutIcon(background=nord0),
                 widget.CurrentLayout(background=nord0),
                 widget.GroupBox(background=nord0,
@@ -270,8 +271,11 @@ screens = [
                                foreground=colors[2])
             ],
             24,
-            border_width=[0, 0, 2, 0],
-            border_color=nord1),
+            border_width=[2, 2, 2, 2],
+            margin=4,
+            opacity=0.8,
+            border_color=nord1,
+        ),
         wallpaper="~/Pictures/Backgrounds/stray_bg.jpg",
         wallpaper_mode="stretch",
     ),
@@ -317,10 +321,12 @@ auto_minimize = True
 # When using the Wayland backend, this can be used to configure input devices.
 wl_input_rules = None
 
+
 @hook.subscribe.startup_once
 def start_once():
     home = os.path.expanduser("~")
     subprocess.call([home + "/.config/qtile/autostart.sh"])
+
 
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
 # string besides java UI toolkits; you can see several discussions on the

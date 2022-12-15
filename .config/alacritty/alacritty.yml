@@ -1,1 +1,21 @@
+window:
+  opacity: 0.80
+  decorations: Full
+  title: Terminal
+font:
+  normal:
+    family: CaskaydiaCove Nerd Font
+    style: Regular
+
+  bold:
+    family: CaskaydiaCove Nerd Font
+    style: Bold
+
+  italic:
+    family: CaskaydiaCove Nerd Font
+    style: Italic
+
+  bold_italic:
+    family: CaskaydiaCove Nerd Font
+    style: Bold Italic
 
