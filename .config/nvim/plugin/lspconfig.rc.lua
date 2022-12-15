@@ -6,10 +6,10 @@ end
 local on_attach = function(_, buffer)
 	local keymap_opts = { buffer = buffer }
 	vim.keymap.set("n", "<c-]>", vim.lsp.buf.definition, keymap_opts)
-  vim.keymap.set("n", "K", vim.lsp.buf.hover, keymap_opts)
-  vim.keymap.set("n", "<c-p>", vim.lsp.buf.signature_help, keymap_opts)
-  vim.keymap.set("n", "<Leader>ca", vim.lsp.buf.code_action, keymap_opts)
-  vim.keymap.set("n", "<Leader>sr", vim.lsp.buf.rename, keymap_opts)
+	vim.keymap.set("n", "K", vim.lsp.buf.hover, keymap_opts)
+	vim.keymap.set("n", "<c-p>", vim.lsp.buf.signature_help, keymap_opts)
+	vim.keymap.set("n", "<Leader>ca", vim.lsp.buf.code_action, keymap_opts)
+	vim.keymap.set("n", "<Leader>sr", vim.lsp.buf.rename, keymap_opts)
 end
 
 -- Typescript
@@ -54,3 +54,8 @@ nvim_lsp.gopls.setup({})
 -- nvim_lsp.rls.setup({
 --on_attach = on_attach
 --})
+
+-- Haskell
+nvim_lsp.hls.setup({
+	cmd = { "haskell-language-server-wrapper", "--lsp" },
+})

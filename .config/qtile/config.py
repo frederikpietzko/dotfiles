@@ -123,7 +123,7 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod],
         "r",
-        lazy.spawncmd(),
+        lazy.spawn("rofi -show run -display-run 'Run: '"),
         desc="Spawn a command using a prompt widget"),
 
     # Volume Control
