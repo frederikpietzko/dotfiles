@@ -41,6 +41,7 @@ checkInstallScripts() {
 
 makeExecutable
 checkInstallScripts
+createSymlink "bashrc" ".bashrc" "$HOME/.bashrc"
 createSymlink "neovim" ".config/nvim" "$HOME/.config/nvim"
 createSymlink "qtile" ".config/qtile" "$HOME/.config/qtile"
 createSymlink "lvim" ".config/lvim" "$HOME/.config/lvim"
