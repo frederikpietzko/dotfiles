@@ -6,7 +6,7 @@
     prompt-font:                 "CaskaydiaCove Nerd Font";
     prompt-background:           #2E3440;
     prompt-foreground:           #E5E9F0;
-    prompt-padding:              4px;
+    prompt-padding:              0px;
     alternate-normal-background: #2E3440;
     alternate-normal-foreground: @text-color;
     selected-normal-background:  #8FBCBB;
@@ -59,15 +59,16 @@
 }
 #inputbar {
     spacing:    0;
-    padding:    1px ;
+    padding:    5px ;
 }
 #case-indicator {
     spacing:    0;
 }
 #entry {
-    padding: 4px 4px;
-    expand: false;
+    expand: true;
     width: 10em;
+    placeholder: "Search";
+    cursor-width: 8px;
 }
 #prompt {
     padding:          @prompt-padding;
