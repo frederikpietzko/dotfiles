@@ -1,13 +1,13 @@
 * {
-    background-color:            #2E3440;
+    background-color:            rgba(46, 52, 64, 0.40);
     border-color:                #4C566A;
     text-color:                  #E5E9F0;
     font:                        "CaskaydiaCove Nerd Font";
     prompt-font:                 "CaskaydiaCove Nerd Font";
-    prompt-background:           #2E3440;
+    prompt-background:           rgba(0,0,0,0);
     prompt-foreground:           #E5E9F0;
     prompt-padding:              0px;
-    alternate-normal-background: #2E3440;
+    element-background:                  @prompt-background;
     alternate-normal-foreground: @text-color;
     selected-normal-background:  #8FBCBB;
     selected-normal-foreground:  #ECEFF4;
@@ -22,7 +22,7 @@
     padding: 0;
 }
 #message {
-    border:       1px dash 0px 0px ;
+    border:       1px solid 0px 0px ;
     padding:      1px ;
 }
 #listview {
@@ -30,20 +30,20 @@
     border:       2px dash 0px 0px ;
     spacing:      2px ;
     scrollbar:    true;
-    padding:      2px 0px 0px ;
+    padding:      2px 2px 2px 2px ;
 }
 #element {
     border:  0;
-    padding: 1px ;
+    border-radius: 2px;
+    margin: 2px;
+    padding: 2px;
+    background-color: @element-background;
 }
 #element.selected.normal {
     background-color: @selected-normal-background;
     text-color:       @selected-normal-foreground;
 }
-#element.alternate.normal {
-    background-color: @alternate-normal-background;
-    text-color:       @alternate-normal-foreground;
-}
+
 #scrollbar {
     width:        0px ;
     border:       0;
