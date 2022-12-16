@@ -43,6 +43,7 @@ makeExecutable
 checkInstallScripts
 createSymlink "bashrc" ".bashrc" "$HOME/.bashrc"
 createSymlink "oh-my-bash" ".oh-my-bash" "$HOME/.oh-my-bash"
+createSymlink "tmux" ".tmux.conf" "$HOME/.tmux.conf"
 createSymlink "neovim" ".config/nvim" "$HOME/.config/nvim"
 createSymlink "qtile" ".config/qtile" "$HOME/.config/qtile"
 createSymlink "lvim" ".config/lvim" "$HOME/.config/lvim"
