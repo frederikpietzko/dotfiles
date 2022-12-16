@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/home/frederik/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/hoob3rt/lualine.nvim"
   },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/home/frederik/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/frederik/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -228,6 +233,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/frederik/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["project.nvim"] = {
+    loaded = true,
+    path = "/home/frederik/.local/share/nvim/site/pack/packer/start/project.nvim",
+    url = "https://github.com/ahmedkhalf/project.nvim"
   },
   ["rust-tools.nvim"] = {
     loaded = true,

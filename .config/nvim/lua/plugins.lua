@@ -58,9 +58,9 @@ packer.startup(function(use)
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-file-browser.nvim")
-  
-  -- Better Project Root for telescope & co kg
-  use("ahmedkhalf/project.nvim")
+
+	-- Better Project Root for telescope & co kg
+	use("ahmedkhalf/project.nvim")
 
 	use("akinsho/nvim-bufferline.lua")
 	use("norcalli/nvim-colorizer.lua")
@@ -77,4 +77,21 @@ packer.startup(function(use)
 
 	-- Whichkey
 	use("folke/which-key.nvim")
+
+	-- Markdown Preview
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	})
+
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	})
 end)
