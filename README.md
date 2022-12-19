@@ -3,7 +3,7 @@
 These are the dotfiles for my linux machines.
 
 ## Roadmap:
-- [ ] Do some more configureation for Tmux.
+- [x] Do some more configureation for Tmux.
 - [ ] Switch from Qtile Bar to Polybar.
 - [ ] Add setup for picom as bash Script.
 - [ ] Add setup for Tabcompletion tooling as bash Script.
