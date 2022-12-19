@@ -44,9 +44,11 @@ checkInstallScripts
 createSymlink "bashrc" ".bashrc" "$HOME/.bashrc"
 createSymlink "oh-my-bash" ".oh-my-bash" "$HOME/.oh-my-bash"
 createSymlink "tmux" ".tmux.conf" "$HOME/.tmux.conf"
+createSymlink "Tmux Plugin Manager" ".tmux" "$HOME/.tmux"
 createSymlink "neovim" ".config/nvim" "$HOME/.config/nvim"
 createSymlink "qtile" ".config/qtile" "$HOME/.config/qtile"
 createSymlink "lvim" ".config/lvim" "$HOME/.config/lvim"
 createSymlink "alacritty" ".config/alacritty" "$HOME/.config/alacritty"
 createSymlink "rofi" ".config/rofi" "$HOME/.config/rofi"
 createSymlink "picom" ".config/picom" "$HOME/.config/picom"
+
